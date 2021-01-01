@@ -39,11 +39,10 @@ Input: Track ID/URI
 Output: Name of track
 '''
 def getTrackName(id):
-    if "spotify:track:" in id:
-        id = id.replace("spotify:track:","")
 
     meta = sp.track(id)
     return meta['name']
+
 '''
 This function returns the features (e.g., loudness, acousticness, instrumentalness, etc.) and
 metadata (e.g. name, artist, album, popularity, etc.) of a given track
@@ -51,8 +50,6 @@ Input: Track ID/URI
 Output: Lists with features/metadata
 '''
 def getTrackFeatures(id):
-    if "spotify:track:" in id:
-        id = id.replace("spotify:track:","")
 
     meta = sp.track(id)
     features = sp.audio_features(id)
