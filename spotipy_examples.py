@@ -1,5 +1,4 @@
 from getspotifydata import *
-import pandas as pd
 
 # example with playlist...
 
